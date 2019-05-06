@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/railscasts.min.css">
+  <title>It-notes</title>
 </head>
 <body>
-
+  <header>
+    <h1>It notes</h1>
+    <nav>
+      <a href="#">VK</a>
+      <a href="#">Twitter</a>
+      <a href="#">Github</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Список записок</h2>
+    <ul>
+      <li>
+        <a href="#">i2wm</a>
+      </li>
+      <li>
+        <a href="#">emacs</a>
+      </li>
+      <li>
+        <a href="#">Clojure</a>
+      </li>
+      <li>
+        <pre>
+          <code class="clojure github">
+            (defn sum [x y]
+              (+ x y))
+          </code>
+        </pre>
+      </li>
+    </ul>
+  </main>
+  <footer></footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
