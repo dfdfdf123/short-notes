@@ -1,62 +1,33 @@
 {
-  "name": "it-notes",
-  "version": "0.1.0",
-  "description": "notes",
-  "main": "gulpfile.js",
-  "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint 'src/sass/**/*.scss' --syntax scss",
-    "eslint": "eslint src/js/**/*.js",
-    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "IE 11"
-  ],
-  "editorconfig-cli": [
-    "*.html",
-    "*.json",
-    "*.js",
-    "src/js/**/*.js",
-    "src/img/**/*.svg",
-    "src/sass/**/*.{sass,scss}"
-  ],
+  "name": "short-notes",
+  "version": "1.0.0",
+  "description": "short notes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnromaonff/it-notes"
+    "url": "git+https://github.com/johnromaonff/short-notes"
   },
-  "author": "desireto",
+  "author": "johnromanoff",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/johnromaonff/it-notes/issues"
+    "url": "https://github.com/johnromaonff/short-notes/issues"
   },
-  "homepage": "https://github.com/johnromaonff/it-notes#readme",
+  "homepage": "https://github.com/johnromaonff/short-notes#readme",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "autoprefixer": "^9.3.1",
-    "browser-sync": "^2.26.5",
-    "del": "^3.0.0",
-    "eslint": "^5.9.0",
-    "eslint-config-htmlacademy": "^0.5.2",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-posthtml": "^3.0.4",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-svgstore": "^7.0.0",
-    "gulp-uglify": "^3.0.1",
-    "gulp-webp": "^3.0.0",
-    "posthtml-include": "^1.2.0",
-    "remove-svg-properties": "^0.3.3",
-    "run-sequence": "^2.2.1",
-    "stylelint": "^9.9.0",
-    "stylelint-config-htmlacademy": "^0.1.1"
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.10.1",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^4.0.4",
+    "sirv-cli": "^0.4.0",
+    "svelte": "^3.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "autobuild": "rollup -c -w",
+    "dev": "run-p start:dev autobuild",
+    "start": "sirv public",
+    "start:dev": "sirv public --dev"
   }
 }
