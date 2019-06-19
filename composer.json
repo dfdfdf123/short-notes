@@ -1,0 +1,12 @@
+{
+    "name": "johnromanoff/short-notes",
+    "authors": [
+        {
+            "name": "johnromanoff",
+            "email": "johnromanoff@yandex.ru"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.12"
+    }
+}
